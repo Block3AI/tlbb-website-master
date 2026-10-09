@@ -1,0 +1,20 @@
+{
+  "name": "tlbb-static-site",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "setup": "npm install",
+    "dev": "concurrently --kill-others --raw \"npm run dev --prefix apps/web\"",
+    "build": "npm run build --prefix apps/web && node scripts/verify-build.mjs",
+    "start": "npm run preview --prefix apps/web",
+    "lint": "concurrently --raw \"npm run lint --prefix apps/web\"",
+    "typecheck": "concurrently --raw \"npm run typecheck --prefix apps/web\""
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.4",
+    "knip": "^6.32.1"
+  },
+  "workspaces": [
+    "apps/*"
+  ]
+}

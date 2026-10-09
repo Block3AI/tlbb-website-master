@@ -1,0 +1,2 @@
+import { ArrowUpRight } from 'lucide-react'; import { socials } from '@/data/project';
+export function Community(){return <section className="community" id="community"><span className="section-label">06 / COMMUNITY</span><h2>THE CRYPTOSPHERE<br/>IS STILL EXPANDING.</h2><p>Follow the story, share the characters, create memes from the lore and use the official TLBB channels below.</p><div className="social-row">{socials.map(s=><a href={s.url} key={s.name} target="_blank" rel="noreferrer">{s.name}<ArrowUpRight size={22}/></a>)}</div></section>}
